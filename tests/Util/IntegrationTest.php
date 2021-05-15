@@ -1,16 +1,16 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Test\Util;
+namespace OneCoin\StellarSdk\Test\Util;
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\XdrModel\Asset;
 
 /**
  * Fixture data is setup in setup-integration-network.
  *
- * This class assumes access to a private network such as https://github.com/zulucrypto/docker-stellar-integration-test-network
+ * This class assumes access to a private network such as https://github.com/OneCoin/docker-stellar-integration-test-network
  */
 abstract class IntegrationTest extends TestCase
 {
@@ -58,7 +58,7 @@ abstract class IntegrationTest extends TestCase
         // Testnet: Test SDF Network ; September 2015
         $this->networkPassword = getenv('STELLAR_NETWORK_PASSWORD');
         if (!$this->networkPassword) {
-            $this->networkPassword = 'Integration Test Network ; zulucrypto';
+            $this->networkPassword = 'Integration Test Network ; OneCoin';
         }
 
         $this->fixtureAccounts = $this->getFixtureAccounts();
@@ -69,7 +69,7 @@ abstract class IntegrationTest extends TestCase
 
     /**
      * @return Keypair
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \OneCoin\StellarSdk\Horizon\Exception\HorizonException
      */
     protected function getRandomFundedKeypair()
     {
@@ -80,7 +80,7 @@ abstract class IntegrationTest extends TestCase
     }
 
     /**
-     * These are defined by the docker container, see: https://github.com/zulucrypto/docker-stellar-integration-test-network
+     * These are defined by the docker container, see: https://github.com/OneCoin/docker-stellar-integration-test-network
      */
     protected function getFixtureAccounts()
     {

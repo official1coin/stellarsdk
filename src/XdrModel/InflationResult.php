@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 class InflationResult extends OperationResult
 {
@@ -43,7 +43,7 @@ class InflationResult extends OperationResult
         }
 
         $numPayouts = $xdr->readUnsignedInteger();
-        for ($i=0; $i < $numPayouts; $i++) {
+        for ($i = 0; $i < $numPayouts; $i++) {
             $model->payouts[] = InflationPayout::fromXdr($xdr);
         }
 

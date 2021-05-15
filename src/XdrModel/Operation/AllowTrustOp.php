@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel\Operation;
+namespace OneCoin\StellarSdk\XdrModel\Operation;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Asset;
 
 class AllowTrustOp extends Operation
 {
@@ -57,8 +57,7 @@ class AllowTrustOp extends Operation
         $bytes .= XdrEncoder::unsignedInteger($this->asset->getType());
         if ($this->asset->getType() == Asset::TYPE_ALPHANUM_4) {
             $bytes .= XdrEncoder::opaqueFixed($this->asset->getAssetCode(), 4, true);
-        }
-        elseif ($this->asset->getType() == Asset::TYPE_ALPHANUM_12) {
+        } elseif ($this->asset->getType() == Asset::TYPE_ALPHANUM_12) {
             $bytes .= XdrEncoder::opaqueFixed($this->asset->getAssetCode(), 12, true);
         }
 

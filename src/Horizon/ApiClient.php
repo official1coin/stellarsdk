@@ -1,30 +1,30 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon;
+namespace OneCoin\StellarSdk\Horizon;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
-use ZuluCrypto\StellarSdk\Horizon\Api\HorizonResponse;
-use ZuluCrypto\StellarSdk\Horizon\Api\PostTransactionResponse;
-use ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException;
-use ZuluCrypto\StellarSdk\Horizon\Exception\PostTransactionException;
-use ZuluCrypto\StellarSdk\Model\Account;
-use ZuluCrypto\StellarSdk\Model\AccountMergeOperation;
-use ZuluCrypto\StellarSdk\Model\CreateAccountOperation;
-use ZuluCrypto\StellarSdk\Model\Effect;
-use ZuluCrypto\StellarSdk\Model\Ledger;
-use ZuluCrypto\StellarSdk\Model\Operation;
-use ZuluCrypto\StellarSdk\Model\PathPayment;
-use ZuluCrypto\StellarSdk\Model\Payment;
-use ZuluCrypto\StellarSdk\Model\Transaction;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\Hash;
-use ZuluCrypto\StellarSdk\Util\Json;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionEnvelope;
+use OneCoin\StellarSdk\Horizon\Api\HorizonResponse;
+use OneCoin\StellarSdk\Horizon\Api\PostTransactionResponse;
+use OneCoin\StellarSdk\Horizon\Exception\HorizonException;
+use OneCoin\StellarSdk\Horizon\Exception\PostTransactionException;
+use OneCoin\StellarSdk\Model\Account;
+use OneCoin\StellarSdk\Model\AccountMergeOperation;
+use OneCoin\StellarSdk\Model\CreateAccountOperation;
+use OneCoin\StellarSdk\Model\Effect;
+use OneCoin\StellarSdk\Model\Ledger;
+use OneCoin\StellarSdk\Model\Operation;
+use OneCoin\StellarSdk\Model\PathPayment;
+use OneCoin\StellarSdk\Model\Payment;
+use OneCoin\StellarSdk\Model\Transaction;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\Util\Hash;
+use OneCoin\StellarSdk\Util\Json;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\XdrModel\TransactionEnvelope;
 
 class ApiClient
 {
@@ -180,8 +180,7 @@ class ApiClient
     {
         try {
             $res = $this->httpClient->get($relativeUrl);
-        }
-        catch (ClientException $e) {
+        } catch (ClientException $e) {
             // If the response can be json-decoded then it can be converted to a HorizonException
             $decoded = null;
             if ($e->getResponse()) {
@@ -207,10 +206,9 @@ class ApiClient
         $apiResponse = null;
 
         try {
-            $apiResponse = $this->httpClient->post($relativeUrl, [ 'form_params' => $parameters ]);
-        }
-        catch (ClientException $e) {
-              // If the response can be json-decoded then it can be converted to a HorizonException
+            $apiResponse = $this->httpClient->post($relativeUrl, ['form_params' => $parameters]);
+        } catch (ClientException $e) {
+            // If the response can be json-decoded then it can be converted to a HorizonException
             $decoded = null;
             if ($e->getResponse()) {
                 $decoded = Json::mustDecode($e->getResponse()->getBody());
@@ -252,7 +250,7 @@ class ApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        $this->getAndStream($url, function($rawData) use ($callback) {
+        $this->getAndStream($url, function ($rawData) use ($callback) {
             $parsedObject = Effect::fromRawResponseData($rawData);
             $parsedObject->setApiClient($this);
 
@@ -292,7 +290,7 @@ class ApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        $this->getAndStream($url, function($rawData) use ($callback) {
+        $this->getAndStream($url, function ($rawData) use ($callback) {
             $parsedObject = Ledger::fromRawResponseData($rawData);
             $parsedObject->setApiClient($this);
 
@@ -327,7 +325,7 @@ class ApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        $this->getAndStream($url, function($rawData) use ($callback) {
+        $this->getAndStream($url, function ($rawData) use ($callback) {
             $parsedObject = Operation::fromRawResponseData($rawData);
             $parsedObject->setApiClient($this);
 
@@ -362,7 +360,7 @@ class ApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        $this->getAndStream($url, function($rawData) use ($callback) {
+        $this->getAndStream($url, function ($rawData) use ($callback) {
             switch ($rawData['type']) {
                 case 'create_account':
                     $parsedObject = CreateAccountOperation::fromRawResponseData($rawData);
@@ -411,7 +409,7 @@ class ApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        $this->getAndStream($url, function($rawData) use ($callback) {
+        $this->getAndStream($url, function ($rawData) use ($callback) {
             $parsedObject = Transaction::fromRawResponseData($rawData);
             $parsedObject->setApiClient($this);
 
@@ -465,9 +463,7 @@ class ApiClient
                         $callback($decoded);
                     }
                 }
-
-            }
-            catch (ServerException $e) {
+            } catch (ServerException $e) {
                 if (!$retryOnServerException) throw $e;
 
                 // Delay for a bit before trying again
@@ -490,9 +486,8 @@ class ApiClient
         $apiResponse = null;
 
         try {
-            $apiResponse = $this->httpClient->post($relativeUrl, [ 'form_params' => $parameters ]);
-        }
-        catch (ClientException $e) {
+            $apiResponse = $this->httpClient->post($relativeUrl, ['form_params' => $parameters]);
+        } catch (ClientException $e) {
             // If the response can be json-decoded then it can be converted to a HorizonException
             $decoded = null;
             if ($e->getResponse()) {
@@ -555,5 +550,4 @@ class ApiClient
     {
         $this->httpClient = $httpClient;
     }
-
 }

@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 class ManageOfferResult extends OperationResult
 {
@@ -79,7 +79,7 @@ class ManageOfferResult extends OperationResult
 
         // Populate claimed offers
         $numOffersClaimed = $xdr->readInteger();
-        for ($i=0; $i < $numOffersClaimed; $i++) {
+        for ($i = 0; $i < $numOffersClaimed; $i++) {
             $model->claimedOffers[] = ClaimOfferAtom::fromXdr($xdr);
         }
 

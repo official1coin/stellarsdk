@@ -1,11 +1,11 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\Util\Debug;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 /**
  *
@@ -114,8 +114,10 @@ class Memo
         if ($memo->type == static::MEMO_TYPE_ID) {
             $memo->value = $xdr->readBigInteger()->toString();
         }
-        if ($memo->type == static::MEMO_TYPE_HASH
-        || $memo->type == static::MEMO_TYPE_RETURN) {
+        if (
+            $memo->type == static::MEMO_TYPE_HASH
+            || $memo->type == static::MEMO_TYPE_RETURN
+        ) {
             $memo->value = $xdr->readOpaqueFixed(32);
         }
 

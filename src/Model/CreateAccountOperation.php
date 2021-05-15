@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
 
 class CreateAccountOperation extends Operation implements AssetTransferInterface

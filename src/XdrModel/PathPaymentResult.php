@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Model\StellarAmount;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 class PathPaymentResult extends OperationResult
 {
@@ -88,7 +88,7 @@ class PathPaymentResult extends OperationResult
         // Normal XDR parsing https://github.com/stellar/stellar-core/blob/3c4e356803175f6c2645e4437881cf07522df94d/src/xdr/Stellar-transaction.x#L441
         else {
             $numOffersClaimed = $xdr->readUnsignedInteger();
-            for ($i=0; $i < $numOffersClaimed; $i++) {
+            for ($i = 0; $i < $numOffersClaimed; $i++) {
                 $model->claimedOffers[] = ClaimOfferAtom::fromXdr($xdr);
             }
 

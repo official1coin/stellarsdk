@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\History;
+namespace OneCoin\StellarSdk\History;
 
 
 /**

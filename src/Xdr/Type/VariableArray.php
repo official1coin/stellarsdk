@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Xdr\Type;
+namespace OneCoin\StellarSdk\Xdr\Type;
 
 
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 class VariableArray implements XdrEncodableInterface
 {

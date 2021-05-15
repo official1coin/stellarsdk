@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Util;
+namespace OneCoin\StellarSdk\Test\Util;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Signing\PrivateKeySigner;
-use ZuluCrypto\StellarSdk\Signing\TrezorSigner;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Signing\PrivateKeySigner;
+use OneCoin\StellarSdk\Signing\TrezorSigner;
 
 /**
  * ## Executing Tests
@@ -80,8 +80,7 @@ abstract class HardwareWalletIntegrationTest extends IntegrationTest
             $signer->setPublicKey(Keypair::newFromMnemonic($this->mnemonic));
 
             $this->horizonServer->setSigningProvider($signer);
-        }
-        else {
+        } else {
             die('Unsupported STELLAR_SIGNING_PROVIDER');
         }
     }

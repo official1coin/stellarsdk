@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use ZuluCrypto\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Keypair;
 
 $keypair = Keypair::newFromRandom();
 

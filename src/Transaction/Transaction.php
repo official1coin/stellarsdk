@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Transaction;
+namespace OneCoin\StellarSdk\Transaction;
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Memo;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\Operation;
-use ZuluCrypto\StellarSdk\XdrModel\TimeBounds;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Model\StellarAmount;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Memo;
+use OneCoin\StellarSdk\XdrModel\Operation\Operation;
+use OneCoin\StellarSdk\XdrModel\TimeBounds;
 
 
 /**
@@ -70,7 +70,7 @@ class Transaction
         $tx->memo = Memo::fromXdr($xdr);
 
         $numOperations = $xdr->readUnsignedInteger();
-        for ($i=0; $i < $numOperations; $i++) {
+        for ($i = 0; $i < $numOperations; $i++) {
             $tx->operations[] = Operation::fromXdr($xdr);
         }
 

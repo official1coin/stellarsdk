@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace OneCoin\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use OneCoin\StellarSdk\Test\Util\IntegrationTest;
 
 class AccountMergeOpTest extends IntegrationTest
 {
     /**
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \OneCoin\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testAccountMerge()

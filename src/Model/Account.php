@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Horizon\Api\HorizonResponse;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\MathSafety;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PaymentOp;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Horizon\Api\HorizonResponse;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\Util\MathSafety;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\Operation\PaymentOp;
 
 /**
  * See: https://www.stellar.org/developers/horizon/reference/resources/account.html
@@ -143,8 +143,7 @@ class Account extends RestApiModel
     {
         if ($payment->isNativeAsset()) {
             $paymentOp = PaymentOp::newNativePayment($payment->getDestinationAccountId(), $payment->getAmount()->getBalanceAsStroops());
-        }
-        else {
+        } else {
             throw new \ErrorException('Not implemented');
         }
 
@@ -152,8 +151,7 @@ class Account extends RestApiModel
             ->setApiClient($this->apiClient)
             ->addOperation(
                 $paymentOp
-            )
-        ;
+            );
 
         return $transaction->submit($signingKeys);
     }
@@ -194,7 +192,7 @@ class Account extends RestApiModel
      * @param null $sinceCursor
      * @param int  $limit
      * @return array
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \OneCoin\StellarSdk\Horizon\Exception\HorizonException
      */
     public function getEffects($sinceCursor = null, $limit = 50)
     {
@@ -369,10 +367,10 @@ class Account extends RestApiModel
 
         return null;
     }
-    
+
     /**
      * Returns an array holding account thresholds.
-     * 
+     *
      * @return array
      */
     public function getThresholds()

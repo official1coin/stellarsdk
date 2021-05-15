@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Derivation;
+namespace OneCoin\StellarSdk\Derivation;
 
 
-use ZuluCrypto\StellarSdk\Util\MathSafety;
+use OneCoin\StellarSdk\Util\MathSafety;
 
 /**
  * A Hierarchical Deterministic node for use with Stellar
@@ -117,7 +117,7 @@ class HdNode
         // Add each part to the return value
         foreach ($parts as $part) {
             // Each subsequent node must be hardened
-            if (strpos($part, "'") != (strlen($part)-1)) throw new \InvalidArgumentException('Path can only contain hardened indexes');
+            if (strpos($part, "'") != (strlen($part) - 1)) throw new \InvalidArgumentException('Path can only contain hardened indexes');
             $part = str_replace("'", '', $part);
 
             if (!is_numeric($part)) throw new \InvalidArgumentException('Path must be numeric');

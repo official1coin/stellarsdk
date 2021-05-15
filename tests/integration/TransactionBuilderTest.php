@@ -1,19 +1,19 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace OneCoin\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Horizon\Exception\PostTransactionException;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\InflationOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageDataOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageOfferOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PathPaymentOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
-use ZuluCrypto\StellarSdk\XdrModel\Price;
+use OneCoin\StellarSdk\Horizon\Exception\PostTransactionException;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Test\Util\IntegrationTest;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\Operation\InflationOp;
+use OneCoin\StellarSdk\XdrModel\Operation\ManageDataOp;
+use OneCoin\StellarSdk\XdrModel\Operation\ManageOfferOp;
+use OneCoin\StellarSdk\XdrModel\Operation\PathPaymentOp;
+use OneCoin\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use OneCoin\StellarSdk\XdrModel\Price;
 
 class TransactionBuilderTest extends IntegrationTest
 {
@@ -66,7 +66,7 @@ class TransactionBuilderTest extends IntegrationTest
         $xdrB64 = $rawData['result_xdr'];
         $xdr = base64_decode($xdrB64);
 
-        $xdr = substr($xdr,8 + 4 + 4);
+        $xdr = substr($xdr, 8 + 4 + 4);
         print "XDR: \n";
         print base64_encode($xdr);
     }
@@ -86,8 +86,7 @@ class TransactionBuilderTest extends IntegrationTest
                 ->submit($sourceKeypair);
 
             $this->fail('Exception was expected');
-        }
-        catch (PostTransactionException $ex) {
+        } catch (PostTransactionException $ex) {
             $result = $ex->getResult();
             $opResults = $result->getOperationResults();
             $this->assertCount(1, $opResults);

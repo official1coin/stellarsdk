@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
 
-use phpseclib\Math\BigInteger;
+use phpseclib3\Math\BigInteger;
 
 class AssetAmount
 {

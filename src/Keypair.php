@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk;
+namespace OneCoin\StellarSdk;
 
 
 use ParagonIE\Sodium\Core\Ed25519;
-use ZuluCrypto\StellarSdk\Derivation\Bip39\Bip39;
-use ZuluCrypto\StellarSdk\Derivation\HdNode;
-use ZuluCrypto\StellarSdk\XdrModel\DecoratedSignature;
+use OneCoin\StellarSdk\Derivation\Bip39\Bip39;
+use OneCoin\StellarSdk\Derivation\HdNode;
+use OneCoin\StellarSdk\XdrModel\DecoratedSignature;
 
 /**
  * A public/private keypair for use with the Stellar network

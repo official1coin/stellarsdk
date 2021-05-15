@@ -1,40 +1,40 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Transaction;
+namespace OneCoin\StellarSdk\Transaction;
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Horizon\Api\PostTransactionResponse;
-use ZuluCrypto\StellarSdk\Horizon\ApiClient;
-use ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException;
-use ZuluCrypto\StellarSdk\Horizon\Exception\PostTransactionException;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Signing\PrivateKeySigner;
-use ZuluCrypto\StellarSdk\Signing\SigningInterface;
-use ZuluCrypto\StellarSdk\Util\MathSafety;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\Type\VariableArray;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\DecoratedSignature;
-use ZuluCrypto\StellarSdk\XdrModel\Memo;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\AccountMergeOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\AllowTrustOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\BumpSequenceOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ChangeTrustOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\CreateAccountOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageDataOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\Operation;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PaymentOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
-use ZuluCrypto\StellarSdk\XdrModel\Signer;
-use ZuluCrypto\StellarSdk\XdrModel\SignerKey;
-use ZuluCrypto\StellarSdk\XdrModel\TimeBounds;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionEnvelope;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Horizon\Api\PostTransactionResponse;
+use OneCoin\StellarSdk\Horizon\ApiClient;
+use OneCoin\StellarSdk\Horizon\Exception\HorizonException;
+use OneCoin\StellarSdk\Horizon\Exception\PostTransactionException;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Model\StellarAmount;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\Signing\PrivateKeySigner;
+use OneCoin\StellarSdk\Signing\SigningInterface;
+use OneCoin\StellarSdk\Util\MathSafety;
+use OneCoin\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use OneCoin\StellarSdk\Xdr\Type\VariableArray;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\DecoratedSignature;
+use OneCoin\StellarSdk\XdrModel\Memo;
+use OneCoin\StellarSdk\XdrModel\Operation\AccountMergeOp;
+use OneCoin\StellarSdk\XdrModel\Operation\AllowTrustOp;
+use OneCoin\StellarSdk\XdrModel\Operation\BumpSequenceOp;
+use OneCoin\StellarSdk\XdrModel\Operation\ChangeTrustOp;
+use OneCoin\StellarSdk\XdrModel\Operation\CreateAccountOp;
+use OneCoin\StellarSdk\XdrModel\Operation\ManageDataOp;
+use OneCoin\StellarSdk\XdrModel\Operation\Operation;
+use OneCoin\StellarSdk\XdrModel\Operation\PaymentOp;
+use OneCoin\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use OneCoin\StellarSdk\XdrModel\Signer;
+use OneCoin\StellarSdk\XdrModel\SignerKey;
+use OneCoin\StellarSdk\XdrModel\TimeBounds;
+use OneCoin\StellarSdk\XdrModel\TransactionEnvelope;
 
 
 /**
@@ -197,8 +197,7 @@ class TransactionBuilder implements XdrEncodableInterface
             $this->signWith($this->signingProvider);
 
             return $this->getTransactionEnvelope();
-        }
-        else {
+        } else {
             return (new TransactionEnvelope($this))->sign($secretKeyString);
         }
     }
@@ -394,8 +393,7 @@ class TransactionBuilder implements XdrEncodableInterface
         // Time Bounds are optional
         if ($this->timeBounds->isEmpty()) {
             $bytes .= XdrEncoder::boolean(false);
-        }
-        else {
+        } else {
             $bytes .= XdrEncoder::boolean(true);
             $bytes .= $this->timeBounds->toXdr();
         }
@@ -579,7 +577,7 @@ class TransactionBuilder implements XdrEncodableInterface
      */
     public function setSequenceNumber($sequenceNumber)
     {
-        if (!is_a($sequenceNumber, 'phpseclib\Math\BigInteger')) {
+        if (!is_a($sequenceNumber, 'phpseclib3\Math\BigInteger')) {
             $sequenceNumber = new BigInteger($sequenceNumber);
         }
 

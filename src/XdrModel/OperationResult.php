@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\Operation;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\Operation\Operation;
 
 class OperationResult
 {

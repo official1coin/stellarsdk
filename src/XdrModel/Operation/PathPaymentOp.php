@@ -1,17 +1,17 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel\Operation;
+namespace OneCoin\StellarSdk\XdrModel\Operation;
 
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Xdr\Type\VariableArray;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Model\StellarAmount;
+use OneCoin\StellarSdk\Xdr\Type\VariableArray;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Asset;
 
 /**
  * https://github.com/stellar/stellar-core/blob/master/src/xdr/Stellar-transaction.x#L72
@@ -129,7 +129,7 @@ class PathPaymentOp extends Operation
         $model = new PathPaymentOp($sendingAsset, $sendMax->getUnscaledBigInteger(), $destinationAccount->getAccountIdString(), $destinationAsset, $destinationAmount->getUnscaledBigInteger());
 
         $numPaths = $xdr->readUnsignedInteger();
-        for ($i=0; $i < $numPaths; $i++) {
+        for ($i = 0; $i < $numPaths; $i++) {
             $model->paths->append(Asset::fromXdr($xdr));
         }
 

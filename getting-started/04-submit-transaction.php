@@ -2,9 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PaymentOp;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\XdrModel\Operation\PaymentOp;
 
 $server = Server::testNet();
 
@@ -19,12 +19,11 @@ $destinationAccountId = 'GA2C5RFPE6GCKMY3US5PAB6UZLKIGSPIUKSLRB6Q723BM2OARMDUYEJ
 $destinationAccount = $server->getAccount($destinationAccountId);
 
 // Build the payment transaction
-$transaction = \ZuluCrypto\StellarSdk\Server::testNet()
+$transaction = \OneCoin\StellarSdk\Server::testNet()
     ->buildTransaction($sourceKeypair->getPublicKey())
     ->addOperation(
         PaymentOp::newNativePayment($destinationAccountId, 1)
-    )
-;
+    );
 
 // Sign and submit the transaction
 $response = $transaction->submit($sourceKeypair->getSecret());

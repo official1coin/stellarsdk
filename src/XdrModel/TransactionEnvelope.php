@@ -1,19 +1,19 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Transaction\Transaction;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Util\Hash;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\Type\VariableArray;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\Transaction\Transaction;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\Util\Debug;
+use OneCoin\StellarSdk\Util\Hash;
+use OneCoin\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use OneCoin\StellarSdk\Xdr\Type\VariableArray;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 class TransactionEnvelope implements XdrEncodableInterface
 {
@@ -61,7 +61,7 @@ class TransactionEnvelope implements XdrEncodableInterface
         $model = new TransactionEnvelope($builder);
 
         $numSignatures = $xdr->readUnsignedInteger();
-        for ($i=0; $i < $numSignatures; $i++) {
+        for ($i = 0; $i < $numSignatures; $i++) {
             $model->signatures->append(DecoratedSignature::fromXdr($xdr));
         }
 
@@ -101,8 +101,7 @@ class TransactionEnvelope implements XdrEncodableInterface
         $transactionHash = null;
         if ($server) {
             $transactionHash = $server->getApiClient()->hash($this->transactionBuilder);
-        }
-        else {
+        } else {
             $transactionHash = $this->transactionBuilder->hash();
         }
 

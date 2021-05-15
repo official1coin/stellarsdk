@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace OneCoin\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use OneCoin\StellarSdk\Test\Util\IntegrationTest;
 
 class ChangeTrustOpTest extends IntegrationTest
 {
     /**
      * @group requires-integrationnet
-     * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+     * @throws \OneCoin\StellarSdk\Horizon\Exception\HorizonException
      * @throws \ErrorException
      */
     public function testAddAndRemoveTrust()
@@ -19,7 +19,7 @@ class ChangeTrustOpTest extends IntegrationTest
         $usdAsset = $this->fixtureAssets['usd'];
 
         $this->horizonServer->buildTransaction($keypair)
-            ->addChangeTrustOp($usdAsset, 4294967297)// 2^32 + 1
+            ->addChangeTrustOp($usdAsset, 4294967297) // 2^32 + 1
             ->submit($keypair);
 
         // Verify trustline is added

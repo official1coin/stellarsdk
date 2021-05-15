@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Model;
+namespace OneCoin\StellarSdk\Test\Unit\Model;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Model\Account;
+use OneCoin\StellarSdk\Model\Account;
 
 class AccountTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 class SetOptionsResult extends OperationResult
 {
@@ -17,7 +17,7 @@ class SetOptionsResult extends OperationResult
     const UNKNOWN_FLAG              = 'set_options_unknown_flag';
     const THRESHOLD_OUT_OF_RANGE    = 'set_options_threshold_out_of_range'; // bad value for weight or threshold
     const BAD_SIGNER                = 'set_options_bad_signer';         // signer cannot be master key
-    const INVALID_HOME_DOMAIN       = 'set_options_invalid_home_domain';// malformed home domain
+    const INVALID_HOME_DOMAIN       = 'set_options_invalid_home_domain'; // malformed home domain
 
     /**
      * @deprecated Do not call this method directly. Instead, use OperationResult::fromXdr

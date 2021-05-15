@@ -2,11 +2,11 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
-use \ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
-use \ZuluCrypto\StellarSdk\XdrModel\SignerKey;
-use \ZuluCrypto\StellarSdk\XdrModel\Signer;
+use \OneCoin\StellarSdk\Keypair;
+use \OneCoin\StellarSdk\Server;
+use \OneCoin\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use \OneCoin\StellarSdk\XdrModel\SignerKey;
+use \OneCoin\StellarSdk\XdrModel\Signer;
 
 $server = Server::testNet();
 

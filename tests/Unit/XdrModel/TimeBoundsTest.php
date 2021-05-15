@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel;
+namespace OneCoin\StellarSdk\Test\Unit\XdrModel;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\TimeBounds;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\TimeBounds;
 
 class TimeBoundsTest extends TestCase
 {

@@ -2,8 +2,8 @@
 
 PHP Library for interacting with the Stellar network.
 
-* Communicate with Horizon server
-* Build and sign transactions
+- Communicate with Horizon server
+- Build and sign transactions
 
 ## :warning: Danger Zone :warning:
 
@@ -13,7 +13,7 @@ This library is under active development and should be considered beta quality.
 Please ensure that you've tested extensively on a test network and have added
 sanity checks in other places in your code.
 
-:warning: [See the release notes for breaking changes](CHANGELOG.md) 
+:warning: [See the release notes for breaking changes](CHANGELOG.md)
 
 **Large Integer Support**
 
@@ -29,7 +29,7 @@ This library attempts to add checks for this scenario and also uses a `BigIntege
 class to work around this problem.
 
 If your application uses large amounts of XLM or a custom asset please do extensive
-testing with large values and use the `StellarAmount` helper class or the `BigInteger` 
+testing with large values and use the `StellarAmount` helper class or the `BigInteger`
 class if possible.
 
 **Floating point issues**
@@ -57,6 +57,7 @@ The above code considers the two values not to be equal even though the same val
 is printed out:
 
 Output:
+
 ```
 float(1.61)
 float(1.61)
@@ -72,14 +73,14 @@ The static `StellarAmount::STROOP_SCALE` property can be used to help with this 
 
 To install the latest release for usage in your project:
 
-	cd your_project/
-	composer require zulucrypto/stellar-api
+    cd your_project/
+    composer require OneCoin/stellar-api
 
 If you want to work with the most recent development version you can use this repository:
 
-	git clone https://github.com/zulucrypto/stellar-api.git
-	cd stellar-api/
-	composer install
+    git clone https://github.com/OneCoin/stellar-api.git
+    cd stellar-api/
+    composer install
 
 ## Getting Started
 
@@ -89,7 +90,7 @@ These examples are modeled after the ones in Stellar's getting started guide:
 
 https://www.stellar.org/developers/guides/get-started/create-account.html
 
-Additional examples are available in the [examples](examples/) directory 
+Additional examples are available in the [examples](examples/) directory
 
 ## Donations
 

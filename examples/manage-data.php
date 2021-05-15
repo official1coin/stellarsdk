@@ -2,8 +2,8 @@
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
-use \ZuluCrypto\StellarSdk\Server;
+use \OneCoin\StellarSdk\Keypair;
+use \OneCoin\StellarSdk\Server;
 
 $server = Server::testNet();
 

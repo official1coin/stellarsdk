@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Signing;
+namespace OneCoin\StellarSdk\Signing;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\XdrModel\DecoratedSignature;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\XdrModel\DecoratedSignature;
 
 class TrezorSigner implements SigningInterface
 {
@@ -54,7 +54,8 @@ class TrezorSigner implements SigningInterface
 
         $bip32Path = sprintf("m/44'/148'/%s'", $this->accountIndex);
 
-        $cmd = sprintf('%s stellar_sign_transaction --address %s -n %s %s',
+        $cmd = sprintf(
+            '%s stellar_sign_transaction --address %s -n %s %s',
             $this->trezorBinPath,
             escapeshellarg($bip32Path),
             escapeshellarg($networkPassphrase),

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace OneCoin\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\Test\Util\IntegrationTest;
 
 
 class ServerTest extends IntegrationTest

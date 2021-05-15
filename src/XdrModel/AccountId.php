@@ -1,13 +1,13 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
-use ZuluCrypto\StellarSdk\AddressableKey;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrDecoder;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\AddressableKey;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrDecoder;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 /**
  * This is the same thing as a PublicKey

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
 
 /**
@@ -79,8 +79,7 @@ class ManageOfferOperation extends Operation
             $this->buyingAsset = new AssetAmount($rawData['amount'], $rawData['buying_asset_code']);
             $this->buyingAsset->setAssetIssuerAccountId($rawData['buying_asset_issuer']);
             $this->buyingAsset->setAssetType($rawData['buying_asset_type']);
-        }
-        else if (isset($rawData['selling_asset_code'])) {
+        } else if (isset($rawData['selling_asset_code'])) {
             $this->sellingAsset = new AssetAmount($rawData['amount'], $rawData['selling_asset_code']);
             $this->sellingAsset->setAssetIssuerAccountId($rawData['selling_asset_issuer']);
             $this->sellingAsset->setAssetType($rawData['selling_asset_type']);

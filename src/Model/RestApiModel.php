@@ -1,8 +1,8 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
-use ZuluCrypto\StellarSdk\Horizon\ApiClient;
+use OneCoin\StellarSdk\Horizon\ApiClient;
 
 class RestApiModel
 {

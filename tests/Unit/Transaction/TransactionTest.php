@@ -1,17 +1,17 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Transaction;
+namespace OneCoin\StellarSdk\Test\Unit\Transaction;
 
 
-use phpseclib\Math\BigInteger;
+use phpseclib3\Math\BigInteger;
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Transaction\Transaction;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\CreateAccountOp;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Transaction\Transaction;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\Util\Debug;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Operation\CreateAccountOp;
 
 class TransactionTest extends TestCase
 {

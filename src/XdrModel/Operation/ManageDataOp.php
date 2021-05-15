@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel\Operation;
+namespace OneCoin\StellarSdk\XdrModel\Operation;
 
 
-use ZuluCrypto\StellarSdk\Util\Debug;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\Util\Debug;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 /**
  * https://github.com/stellar/stellar-core/blob/master/src/xdr/Stellar-transaction.x#L218
@@ -47,8 +47,7 @@ class ManageDataOp extends Operation
         if ($this->value) {
             $bytes .= XdrEncoder::boolean(true);
             $bytes .= XdrEncoder::opaqueVariable($this->value);
-        }
-        else {
+        } else {
             $bytes .= XdrEncoder::boolean(false);
         }
 

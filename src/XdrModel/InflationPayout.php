@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Model\StellarAmount;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 class InflationPayout
 {

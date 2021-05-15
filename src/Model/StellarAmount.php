@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Util\MathSafety;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Util\MathSafety;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 /**
  * Helper class for working with stellar values
@@ -80,8 +80,7 @@ class StellarAmount
         // Can also pass in another StellarAmount
         else if ($lumensOrBigIntegerStroops instanceof StellarAmount) {
             $this->stroops = clone $lumensOrBigIntegerStroops->getUnscaledBigInteger();
-        }
-        else {
+        } else {
             $lumensOrBigIntegerStroops = number_format($lumensOrBigIntegerStroops, 7, '.', '');
             $parts = explode('.', $lumensOrBigIntegerStroops);
             $unscaledAmount = new BigInteger('0');
@@ -95,7 +94,7 @@ class StellarAmount
             // Add everything to the right of the decimal point
             if (count($parts) == 2 && str_replace('0', '', $parts[1]) != '') {
                 // Should be a total of 7 decimal digits to the right of the decimal
-                $unscaledAmountRight = str_pad($parts[1], 7, '0',STR_PAD_RIGHT);
+                $unscaledAmountRight = str_pad($parts[1], 7, '0', STR_PAD_RIGHT);
                 $unscaledAmount = $unscaledAmount->add(new BigInteger($unscaledAmountRight));
             }
 

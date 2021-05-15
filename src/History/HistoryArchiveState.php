@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\History;
+namespace OneCoin\StellarSdk\History;
 
-use ZuluCrypto\StellarSdk\Util\Json;
+use OneCoin\StellarSdk\Util\Json;
 
 
 /**

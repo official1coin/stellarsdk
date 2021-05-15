@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\History;
+namespace OneCoin\StellarSdk\History;
 
 
 use GuzzleHttp\Client;
 use Symfony\Component\Filesystem\Filesystem;
-use ZuluCrypto\StellarSdk\Util\Json;
+use OneCoin\StellarSdk\Util\Json;
 
 /**
  * Manages downloading from a HTTP history archive
@@ -57,7 +57,7 @@ class HttpHistoryArchive
     {
         $this->syncRootHas();
 
-        $startingLedger = 64-1;
+        $startingLedger = 64 - 1;
         $ledgerIncrement = 64;
         $currLedger = $startingLedger;
         $percentComplete = 0;
@@ -159,9 +159,12 @@ class HttpHistoryArchive
         $subdir .= '/' . substr($prefixHex, 4, 2);
 
         // Then the filename + hex + extension
-        return sprintf('%s/%s-%s.%s',
+        return sprintf(
+            '%s/%s-%s.%s',
             $subdir,
-            $category, $prefixHex, $extension
+            $category,
+            $prefixHex,
+            $extension
         );
     }
 
@@ -174,7 +177,8 @@ class HttpHistoryArchive
         $subdir .= '/' . substr($prefixHex, 2, 2);
         $subdir .= '/' . substr($prefixHex, 4, 2);
 
-        return sprintf('%s/bucket-%s.xdr.gz',
+        return sprintf(
+            '%s/bucket-%s.xdr.gz',
             $subdir,
             $prefixHex
         );

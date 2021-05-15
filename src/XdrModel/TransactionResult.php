@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Model\StellarAmount;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Model\StellarAmount;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
 
 class TransactionResult
 {
@@ -79,7 +79,7 @@ class TransactionResult
         $model->resultCode = $resultCodeMap[$rawCode];
 
         $numOperations = $xdr->readInteger();
-        for ($i=0; $i < $numOperations; $i++) {
+        for ($i = 0; $i < $numOperations; $i++) {
             $op = OperationResult::fromXdr($xdr);
             $model->operationResults[] = $op;
         }

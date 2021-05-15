@@ -1,23 +1,23 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel;
+namespace OneCoin\StellarSdk\Test\Unit\XdrModel;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\AccountMergeResult;
-use ZuluCrypto\StellarSdk\XdrModel\AllowTrustResult;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\ChangeTrustResult;
-use ZuluCrypto\StellarSdk\XdrModel\CreateAccountResult;
-use ZuluCrypto\StellarSdk\XdrModel\InflationResult;
-use ZuluCrypto\StellarSdk\XdrModel\ManageDataResult;
-use ZuluCrypto\StellarSdk\XdrModel\ManageOfferResult;
-use ZuluCrypto\StellarSdk\XdrModel\OperationResult;
-use ZuluCrypto\StellarSdk\XdrModel\PathPaymentResult;
-use ZuluCrypto\StellarSdk\XdrModel\PaymentResult;
-use ZuluCrypto\StellarSdk\XdrModel\SetOptionsResult;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\AccountMergeResult;
+use OneCoin\StellarSdk\XdrModel\AllowTrustResult;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\ChangeTrustResult;
+use OneCoin\StellarSdk\XdrModel\CreateAccountResult;
+use OneCoin\StellarSdk\XdrModel\InflationResult;
+use OneCoin\StellarSdk\XdrModel\ManageDataResult;
+use OneCoin\StellarSdk\XdrModel\ManageOfferResult;
+use OneCoin\StellarSdk\XdrModel\OperationResult;
+use OneCoin\StellarSdk\XdrModel\PathPaymentResult;
+use OneCoin\StellarSdk\XdrModel\PaymentResult;
+use OneCoin\StellarSdk\XdrModel\SetOptionsResult;
 
 class OperationResultTest extends TestCase
 {

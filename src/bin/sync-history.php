@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Mirrors a history archive to the target directory
  *
@@ -9,7 +10,7 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\History\HttpHistoryArchive;
+use \OneCoin\StellarSdk\History\HttpHistoryArchive;
 
 // Root URL of the history archive
 $sourceArchiveUrl = $argv[1];

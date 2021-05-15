@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Xdr;
+namespace OneCoin\StellarSdk\Xdr;
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Xdr\Iface\XdrEncodableInterface;
 
 
 /**
@@ -58,7 +58,7 @@ class XdrEncoder
         if (strlen($value) > $maxLength) throw new \InvalidArgumentException(sprintf('Value of length %s is greater than the maximum allowed length of %s', strlen($value), $maxLength));
 
         $bytes = '';
-        
+
         $bytes .= self::unsignedInteger(strlen($value));
         $bytes .= self::applyPadding($value);
 
@@ -185,7 +185,7 @@ class XdrEncoder
 
     public static function unsignedInteger256($value)
     {
-        return self::opaqueFixed($value, (256/8));
+        return self::opaqueFixed($value, (256 / 8));
     }
 
     public static function boolean($value)
@@ -235,8 +235,7 @@ class XdrEncoder
         if ($value !== null) {
             $bytes .= self::boolean(true);
             $bytes .= $value->toXdr();
-        }
-        else {
+        } else {
             $bytes .= self::boolean(false);
         }
 
@@ -254,8 +253,7 @@ class XdrEncoder
         if ($value !== null) {
             $bytes .= self::boolean(true);
             $bytes .= static::unsignedInteger($value);
-        }
-        else {
+        } else {
             $bytes .= self::boolean(false);
         }
 
@@ -273,8 +271,7 @@ class XdrEncoder
         if ($value !== null) {
             $bytes .= self::boolean(true);
             $bytes .= static::string($value, $maximumLength);
-        }
-        else {
+        } else {
             $bytes .= self::boolean(false);
         }
 
@@ -300,8 +297,7 @@ class XdrEncoder
 
         if ($rightPadding) {
             return $value . str_repeat(chr(0), $numPaddingChars);
-        }
-        else {
+        } else {
             return str_repeat(chr(0), $numPaddingChars) . $value;
         }
     }

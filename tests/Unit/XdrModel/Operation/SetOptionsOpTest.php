@@ -1,17 +1,17 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel\Operation;
+namespace OneCoin\StellarSdk\Test\Unit\XdrModel\Operation;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\AccountMergeOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\Operation;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
-use ZuluCrypto\StellarSdk\XdrModel\Signer;
-use ZuluCrypto\StellarSdk\XdrModel\SignerKey;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\Operation\AccountMergeOp;
+use OneCoin\StellarSdk\XdrModel\Operation\Operation;
+use OneCoin\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use OneCoin\StellarSdk\XdrModel\Signer;
+use OneCoin\StellarSdk\XdrModel\SignerKey;
 
 class SetOptionsOpTest extends TestCase
 {

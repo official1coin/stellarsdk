@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Signing;
+namespace OneCoin\StellarSdk\Signing;
 
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\XdrModel\DecoratedSignature;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\XdrModel\DecoratedSignature;
 
 interface SigningInterface
 {

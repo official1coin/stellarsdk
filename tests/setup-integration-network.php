@@ -3,7 +3,7 @@
 /**
  * Sets up the accounts, issuers, assets, etc. on the integration network
  *
- * This script is designed to be run on a private network such as: https://github.com/zulucrypto/docker-stellar-integration-test-network
+ * This script is designed to be run on a private network such as: https://github.com/OneCoin/docker-stellar-integration-test-network
  *
  * Example URL to view path payment from Alice -> Bob for 500 EURTEST:
  *  /paths?destination_account=GALOPAYIVBYBZX3JYUET67WWBDKOOSPYQ2437IKKZCPXXA4HHOKUZ5OA&source_account=GD4JRFLPF4AGYQTLCMZ7Q7DRLGQZQTGWOOKDUCNRVKG66G5ZVYYFT76M&destination_asset_type=credit_alphanum12&destination_asset_code=EURTEST&destination_asset_issuer=GBOCHOYXRJ7JSN22MLEUC6VPYYYWQBY77YEY2FUPJVUZNW2AMAIA5ISC&destination_amount=500
@@ -13,19 +13,19 @@
 require_once(__DIR__ . '/../vendor/autoload.php');
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\Server;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\ManageOfferOp;
-use ZuluCrypto\StellarSdk\XdrModel\Price;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\SetOptionsOp;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\Server;
+use OneCoin\StellarSdk\XdrModel\Operation\ManageOfferOp;
+use OneCoin\StellarSdk\XdrModel\Price;
+use OneCoin\StellarSdk\XdrModel\Operation\SetOptionsOp;
 
 
 $horizonBaseUrl = getenv('STELLAR_HORIZON_BASE_URL');
 if (!$horizonBaseUrl) $horizonBaseUrl = 'http://localhost:8000/';
 
 $networkPassphrase = getenv('STELLAR_NETWORK_PASSPHRASE');
-if (!$networkPassphrase) $networkPassphrase = 'Integration Test Network ; zulucrypto';
+if (!$networkPassphrase) $networkPassphrase = 'Integration Test Network ; OneCoin';
 
 $server = Server::customNet($horizonBaseUrl, $networkPassphrase);
 
@@ -141,7 +141,7 @@ $server->buildTransaction($jpyBankKeypair)
  *
  * @param $secretKey
  * @return Keypair
- * @throws \ZuluCrypto\StellarSdk\Horizon\Exception\HorizonException
+ * @throws \OneCoin\StellarSdk\Horizon\Exception\HorizonException
  */
 function setupKeypair($secretKey)
 {

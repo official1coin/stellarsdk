@@ -1,6 +1,6 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Util;
+namespace OneCoin\StellarSdk\Util;
 
 
 class MathSafety

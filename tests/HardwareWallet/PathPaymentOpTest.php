@@ -1,14 +1,14 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\HardwareWallet;
+namespace OneCoin\StellarSdk\Test\HardwareWallet;
 
 
-use ZuluCrypto\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
-use ZuluCrypto\StellarSdk\Keypair;
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PathPaymentOp;
+use OneCoin\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use OneCoin\StellarSdk\Keypair;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\Operation\PathPaymentOp;
 
 class PathPaymentOpTest extends HardwareWalletIntegrationTest
 {

@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
-use ZuluCrypto\StellarSdk\XdrModel\Operation\BumpSequenceOp;
+use OneCoin\StellarSdk\XdrModel\Operation\BumpSequenceOp;
 
 
 /**

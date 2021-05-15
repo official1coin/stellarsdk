@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel;
+namespace OneCoin\StellarSdk\XdrModel;
 
 
-use ZuluCrypto\StellarSdk\Xdr\Iface\XdrEncodableInterface;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\Xdr\Iface\XdrEncodableInterface;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 /**
  * XDR union info:
@@ -87,12 +87,10 @@ class Asset implements XdrEncodableInterface
 
         if ($this->type == self::TYPE_NATIVE) {
             // no additional content for native types
-        }
-        elseif ($this->type == self::TYPE_ALPHANUM_4) {
+        } elseif ($this->type == self::TYPE_ALPHANUM_4) {
             $bytes .= XdrEncoder::opaqueFixed($this->assetCode, 4, true);
             $bytes .= $this->issuer->toXdr();
-        }
-        elseif ($this->type == self::TYPE_ALPHANUM_12) {
+        } elseif ($this->type == self::TYPE_ALPHANUM_12) {
             $bytes .= XdrEncoder::opaqueFixed($this->assetCode, 12, true);
             $bytes .= $this->issuer->toXdr();
         }

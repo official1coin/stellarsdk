@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Signing;
+namespace OneCoin\StellarSdk\Signing;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Transaction\TransactionBuilder;
-use ZuluCrypto\StellarSdk\XdrModel\DecoratedSignature;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Transaction\TransactionBuilder;
+use OneCoin\StellarSdk\XdrModel\DecoratedSignature;
 
 /**
  * Capable of signing with a Keypair containing the secret key

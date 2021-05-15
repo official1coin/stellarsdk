@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon\Exception;
+namespace OneCoin\StellarSdk\Horizon\Exception;
 
 
 use GuzzleHttp\Exception\ClientException;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\TransactionResult;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\TransactionResult;
 
 class PostTransactionException extends HorizonException
 {

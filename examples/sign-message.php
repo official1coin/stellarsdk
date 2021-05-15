@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Demonstrates how to sign and verify a message using Stellar keypairs
  */
 
 require '../vendor/autoload.php';
 
-use \ZuluCrypto\StellarSdk\Keypair;
+use \OneCoin\StellarSdk\Keypair;
 
 $message = 'test stellar message';
 

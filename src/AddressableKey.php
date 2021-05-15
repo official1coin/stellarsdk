@@ -1,12 +1,12 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk;
+namespace OneCoin\StellarSdk;
 
 use Base32\Base32;
 use ParagonIE\Sodium\Core\Ed25519;
-use ZuluCrypto\StellarSdk\Util\Checksum;
-use ZuluCrypto\StellarSdk\Util\Debug;
+use OneCoin\StellarSdk\Util\Checksum;
+use OneCoin\StellarSdk\Util\Debug;
 
 
 /**
@@ -58,7 +58,7 @@ class AddressableKey
 
     /**
      * Converts $rawBytes into a public account ID (G...)
-     * 
+     *
      * @param $rawBytes
      * @return string
      */

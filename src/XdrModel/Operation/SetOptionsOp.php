@@ -1,13 +1,13 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\XdrModel\Operation;
+namespace OneCoin\StellarSdk\XdrModel\Operation;
 
 
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Signer;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Signer;
 
 class SetOptionsOp extends Operation
 {
@@ -183,8 +183,7 @@ class SetOptionsOp extends Operation
         if ($isRequired) {
             $this->setFlags   = $this->setFlags | static::FLAG_AUTH_REQUIRED;
             $this->clearFlags = $this->clearFlags & ~(static::FLAG_AUTH_REQUIRED);
-        }
-        else {
+        } else {
             $this->setFlags   = $this->setFlags & ~(static::FLAG_AUTH_REQUIRED);
             $this->clearFlags = $this->clearFlags | static::FLAG_AUTH_REQUIRED;
         }
@@ -211,8 +210,7 @@ class SetOptionsOp extends Operation
         if ($isRevocable) {
             $this->setFlags   = $this->setFlags | static::FLAG_AUTH_REVOCABLE;
             $this->clearFlags = $this->clearFlags & ~(static::FLAG_AUTH_REVOCABLE);
-        }
-        else {
+        } else {
             $this->setFlags   = $this->setFlags & ~(static::FLAG_AUTH_REVOCABLE);
             $this->clearFlags = $this->clearFlags | static::FLAG_AUTH_REVOCABLE;
         }
@@ -260,7 +258,7 @@ class SetOptionsOp extends Operation
      */
     public function setLowThreshold($threshold)
     {
-        if ($threshold < 0 || $threshold > 255) throw new \InvalidArgumentException('$threshold must be between 0 and ' . (2^32-1));
+        if ($threshold < 0 || $threshold > 255) throw new \InvalidArgumentException('$threshold must be between 0 and ' . (2 ^ 32 - 1));
 
         $this->lowThreshold = $threshold;
 
@@ -273,7 +271,7 @@ class SetOptionsOp extends Operation
      */
     public function setMediumThreshold($threshold)
     {
-        if ($threshold < 0 || $threshold > 255) throw new \InvalidArgumentException('$threshold must be between 0 and ' . (2^32-1));
+        if ($threshold < 0 || $threshold > 255) throw new \InvalidArgumentException('$threshold must be between 0 and ' . (2 ^ 32 - 1));
 
         $this->mediumThreshold = $threshold;
 
@@ -286,7 +284,7 @@ class SetOptionsOp extends Operation
      */
     public function setHighThreshold($threshold)
     {
-        if ($threshold < 0 || $threshold > 255) throw new \InvalidArgumentException('$threshold must be between 0 and ' . (2^32-1));
+        if ($threshold < 0 || $threshold > 255) throw new \InvalidArgumentException('$threshold must be between 0 and ' . (2 ^ 32 - 1));
 
         $this->highThreshold = $threshold;
 

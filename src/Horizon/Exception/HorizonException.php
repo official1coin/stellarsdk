@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Horizon\Exception;
+namespace OneCoin\StellarSdk\Horizon\Exception;
 
 
 use GuzzleHttp\Exception\ClientException;
@@ -65,7 +65,7 @@ class HorizonException extends \ErrorException
      * @var array
      */
     protected $raw;
-    
+
     /**
      * Result codes for Horizon operations errors.
      *
@@ -127,11 +127,13 @@ class HorizonException extends \ErrorException
     /**
      * @return string
      */
-    protected function buildMessage() {
+    protected function buildMessage()
+    {
         // Additional data used to help the user resolve the error
         $hint = '';
 
-        $message = sprintf('[%s] %s: %s (Requested URL: %s %s)',
+        $message = sprintf(
+            '[%s] %s: %s (Requested URL: %s %s)',
             $this->httpStatusCode,
             $this->title,
             $this->detail,
@@ -143,7 +145,7 @@ class HorizonException extends \ErrorException
             $message .= sprintf(" Tx Result: %s", $this->transactionResultCode);
         }
         if (!empty($this->operationResultCodes)) {
-            $message .= sprintf(" Op Results: %s", print_r($this->operationResultCodes,true));
+            $message .= sprintf(" Op Results: %s", print_r($this->operationResultCodes, true));
         }
 
         // Rate limit exceeded
@@ -265,20 +267,20 @@ class HorizonException extends \ErrorException
     {
         $this->clientException = $clientException;
     }
-    
-     /**
+
+    /**
      * Get the result codes from Horizon Response.
-     * 
+     *
      * @return array
      */
     function getOperationResultCodes()
     {
         return $this->operationResultCodes;
     }
-    
+
     /**
      * Set the result codes from Horizon Response.
-     * 
+     *
      * @param array $operationResultCodes
      */
     function setOperationResultCodes($operationResultCodes)

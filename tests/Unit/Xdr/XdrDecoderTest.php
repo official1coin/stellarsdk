@@ -1,10 +1,10 @@
 <?php
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\Xdr;
+namespace OneCoin\StellarSdk\Test\Unit\Xdr;
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Xdr\XdrDecoder;
-use ZuluCrypto\StellarSdk\Xdr\XdrEncoder;
+use OneCoin\StellarSdk\Xdr\XdrDecoder;
+use OneCoin\StellarSdk\Xdr\XdrEncoder;
 
 class XdrDecoderTest extends TestCase
 {

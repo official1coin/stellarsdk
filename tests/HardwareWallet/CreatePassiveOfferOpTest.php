@@ -1,14 +1,14 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\HardwareWallet;
+namespace OneCoin\StellarSdk\Test\HardwareWallet;
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp;
-use ZuluCrypto\StellarSdk\XdrModel\Price;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp;
+use OneCoin\StellarSdk\XdrModel\Price;
 
 class CreatePassiveOfferOpTest extends HardwareWalletIntegrationTest
 {

@@ -1,14 +1,14 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel\Operation;
+namespace OneCoin\StellarSdk\Test\Unit\XdrModel\Operation;
 
 
-use phpseclib\Math\BigInteger;
+use phpseclib3\Math\BigInteger;
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\BumpSequenceOp;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\Operation;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\Operation\BumpSequenceOp;
+use OneCoin\StellarSdk\XdrModel\Operation\Operation;
 
 class BumpSequenceOpTest extends TestCase
 {

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Model;
+namespace OneCoin\StellarSdk\Model;
 
 
-use phpseclib\Math\BigInteger;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\BumpSequenceOp;
+use phpseclib3\Math\BigInteger;
+use OneCoin\StellarSdk\XdrModel\Operation\BumpSequenceOp;
 
 class BumpSequenceOperation extends Operation
 {

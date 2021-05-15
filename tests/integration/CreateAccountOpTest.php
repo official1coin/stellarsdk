@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Integration;
+namespace OneCoin\StellarSdk\Test\Integration;
 
 
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Test\Util\IntegrationTest;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Test\Util\IntegrationTest;
 
 class CreateAccountOpTest extends IntegrationTest
 {

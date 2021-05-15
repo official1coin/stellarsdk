@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Test\Unit\XdrModel\Operation;
+namespace OneCoin\StellarSdk\Test\Unit\XdrModel\Operation;
 
 
 use PHPUnit\Framework\TestCase;
-use ZuluCrypto\StellarSdk\Keypair;
-use ZuluCrypto\StellarSdk\Xdr\XdrBuffer;
-use ZuluCrypto\StellarSdk\XdrModel\AccountId;
-use ZuluCrypto\StellarSdk\XdrModel\Asset;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\Operation;
-use ZuluCrypto\StellarSdk\XdrModel\Operation\PathPaymentOp;
+use OneCoin\StellarSdk\Keypair;
+use OneCoin\StellarSdk\Xdr\XdrBuffer;
+use OneCoin\StellarSdk\XdrModel\AccountId;
+use OneCoin\StellarSdk\XdrModel\Asset;
+use OneCoin\StellarSdk\XdrModel\Operation\Operation;
+use OneCoin\StellarSdk\XdrModel\Operation\PathPaymentOp;
 
 class PathPaymentOpTest extends TestCase
 {

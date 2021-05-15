@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ZuluCrypto\StellarSdk\Derivation\Bip39;
+namespace OneCoin\StellarSdk\Derivation\Bip39;
 
 
-use ZuluCrypto\StellarSdk\Util\Debug;
+use OneCoin\StellarSdk\Util\Debug;
 
 /**
  * Minimal BIP-39 implementation (only what's necessary to generate seeds for
@@ -26,7 +26,7 @@ class Bip39
      */
     public static function getEntropyChecksumHex($entropyBytes)
     {
-        $checksumLengthBits = (strlen($entropyBytes)*8) / 32;
+        $checksumLengthBits = (strlen($entropyBytes) * 8) / 32;
         $hashBytes = hash('sha256', $entropyBytes, true);
 
         // base_convert can only handle up to 64 bits, so we have to reduce the
@@ -63,7 +63,7 @@ class Bip39
         if (strlen($bitstring) % $chunkSizeBits !== 0) throw new \InvalidArgumentException(sprintf('Got bitstring of length %s, but it must be divisible by %s', strlen($bitstring), $chunkSizeBits));
 
         $finalHex = '';
-        for ($i=0; $i < strlen($bitstring); $i += $chunkSizeBits) {
+        for ($i = 0; $i < strlen($bitstring); $i += $chunkSizeBits) {
             $bitstringPart = substr($bitstring, $i, $chunkSizeBits);
             $hex = base_convert($bitstringPart, 2, 16);
             // Ensure hex is always two characters
@@ -169,7 +169,7 @@ class Bip39
     protected function parseMnemonic($mnemonic)
     {
         $words = explode(' ', $mnemonic);
-        if (count($words) %3 !== 0) throw new \InvalidArgumentException('Invalid mnemonic (number of words must be a multiple of 3)');
+        if (count($words) % 3 !== 0) throw new \InvalidArgumentException('Invalid mnemonic (number of words must be a multiple of 3)');
 
         $wordBitstrings = [];
         foreach ($words as $word) {
