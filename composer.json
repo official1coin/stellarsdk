@@ -1,5 +1,6 @@
 {
-  "name": "OneCoin/StellarSdk",
+  "name": "official1coin/stellarsdk",
+  "version": "0.1",
   "description": "API client for the Stellar network",
   "autoload": {
     "psr-4": {
