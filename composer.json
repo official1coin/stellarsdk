@@ -1,6 +1,6 @@
 {
   "name": "official1coin/stellarsdk",
-  "version": "v1.0.2",
+  "version": "v1.0.3",
   "description": "API client for the Stellar network",
   "autoload": {
     "psr-4": {
@@ -13,11 +13,13 @@
     }
   },
   "require": {
+    "php": "^8.0",
     "guzzlehttp/guzzle": "^7.0",
     "christian-riesen/base32": "^1.6",
     "paragonie/sodium_compat": "^1.16",
     "phpseclib/phpseclib": "^3.0",
-    "symfony/filesystem": "^4.1"
+    "symfony/filesystem": "^4.1",
+    "laravel/framework": "^8.33"
   },
   "license": "MIT",
   "authors": [
@@ -26,6 +28,18 @@
       "email": "aaron@1coin.io"
     }
   ],
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "OneCoin\\StellarSdk\\StellarSdkServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require-dev": {
     "phpunit/phpunit": "^9.3.3"
   }

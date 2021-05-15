@@ -5,8 +5,6 @@ PHP Library for interacting with the Stellar network.
 - Communicate with Horizon server
 - Build and sign transactions
 
-## :warning: Danger Zone :warning:
-
 **Development Status**
 
 This library is under active development and should be considered beta quality.
@@ -74,13 +72,7 @@ The static `StellarAmount::STROOP_SCALE` property can be used to help with this 
 To install the latest release for usage in your project:
 
     cd your_project/
-    composer require OneCoin/stellar-api
-
-If you want to work with the most recent development version you can use this repository:
-
-    git clone https://github.com/OneCoin/stellar-api.git
-    cd stellar-api/
-    composer install
+    composer require official1coin/stellarsdk
 
 ## Getting Started
 
@@ -94,4 +86,4 @@ Additional examples are available in the [examples](examples/) directory
 
 ## Donations
 
-Stellar: GCUVDZRQ6CX347AMUUWZDYSNDFAWDN6FUYM5DVYYVO574NHTAUCQAK53
+Stellar: GAF3DND6FP6W2XIPMPQJPTG6SKYRD3CTKTZ6FUZGCM2ZQFY7CBI4Q646
