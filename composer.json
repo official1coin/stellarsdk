@@ -1,7 +1,7 @@
 {
   "name": "official1coin/stellarsdk",
   "type": "library",
-  "version": "v1.0.7",
+  "version": "v1.0.8",
   "description": "API client for the Stellar network",
   "autoload": {
     "psr-4": {
@@ -15,12 +15,12 @@
   },
   "require": {
     "php": "^8.0",
-    "guzzlehttp/guzzle": "^7.0",
     "christian-riesen/base32": "^1.6",
+    "guzzlehttp/guzzle": "^7.0",
+    "laravel/framework": "^8.33",
     "paragonie/sodium_compat": "^1.16",
     "phpseclib/phpseclib": "^3.0",
-    "symfony/filesystem": "^4.1",
-    "laravel/framework": "^8.33"
+    "symfony/filesystem": "^5.2"
   },
   "license": "MIT",
   "authors": [
