@@ -13,7 +13,7 @@ class StellarSdkServiceProvider extends ServiceProvider
         $configPath = __DIR__ . '/../config/stellarsdk.php';
         $this->mergeConfigFrom($configPath, 'stellarsdk');
 
-        $this->app->singleton(StellarSdk::class, function ($app) {
+        $this->app->singleton(Server::class, function ($app) {
             if (config('stellar_network') == 'public') {
                 return Server::publicNet();
             } elseif (config('stellar_network') == 'test') {
