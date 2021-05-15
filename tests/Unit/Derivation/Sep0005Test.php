@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Unit\Slip0010;
+namespace Tests\Unit\Slip0010;
 
 
 use PHPUnit\Framework\TestCase;

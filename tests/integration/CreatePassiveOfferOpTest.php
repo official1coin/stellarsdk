@@ -1,10 +1,10 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Integration;
+namespace Tests\Integration;
 
 
-use OneCoin\StellarSdk\Test\Util\IntegrationTest;
+use Tests\Util\IntegrationTest;
 use OneCoin\StellarSdk\XdrModel\Asset;
 use OneCoin\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp;
 use OneCoin\StellarSdk\XdrModel\Price;

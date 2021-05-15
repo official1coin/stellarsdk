@@ -1,11 +1,11 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\HardwareWallet;
+namespace Tests\HardwareWallet;
 
 use phpseclib3\Math\BigInteger;
 use OneCoin\StellarSdk\Keypair;
-use OneCoin\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use Tests\Util\HardwareWalletIntegrationTest;
 use OneCoin\StellarSdk\XdrModel\Asset;
 use OneCoin\StellarSdk\XdrModel\Operation\CreatePassiveOfferOp;
 use OneCoin\StellarSdk\XdrModel\Price;

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\HardwareWallet;
+namespace Tests\HardwareWallet;
 
 
 use phpseclib3\Math\BigInteger;
 use OneCoin\StellarSdk\Keypair;
-use OneCoin\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use Tests\Util\HardwareWalletIntegrationTest;
 
 class BumpSequenceOpTest extends HardwareWalletIntegrationTest
 {

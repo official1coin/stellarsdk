@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Unit\Model;
+namespace Tests\Unit\Model;
 
 
 use PHPUnit\Framework\TestCase;

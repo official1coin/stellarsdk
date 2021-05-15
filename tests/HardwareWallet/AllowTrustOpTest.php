@@ -1,9 +1,9 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\HardwareWallet;
+namespace Tests\HardwareWallet;
 
-use OneCoin\StellarSdk\Test\Util\HardwareWalletIntegrationTest;
+use Tests\Util\HardwareWalletIntegrationTest;
 use phpseclib3\Math\BigInteger;
 use OneCoin\StellarSdk\Keypair;
 use OneCoin\StellarSdk\XdrModel\Asset;

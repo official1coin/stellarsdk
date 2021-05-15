@@ -1,11 +1,15 @@
 {
   "name": "official1coin/stellarsdk",
-  "version": "v1.0.1",
+  "version": "v1.0.2",
   "description": "API client for the Stellar network",
   "autoload": {
     "psr-4": {
-      "OneCoin\\StellarSdk\\": "src/",
-      "OneCoin\\StellarSdk\\Test\\": "tests/"
+      "OneCoin\\StellarSdk\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
     }
   },
   "require": {

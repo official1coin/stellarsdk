@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Unit\Derivation\Bip39;
+namespace Tests\Unit\Derivation\Bip39;
 
 
 use PHPUnit\Framework\TestCase;

@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCoin\StellarSdk\Test\Unit\Transaction;
+namespace Tests\Unit\Transaction;
 
 
 use phpseclib3\Math\BigInteger;

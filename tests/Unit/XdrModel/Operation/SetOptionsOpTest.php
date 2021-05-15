@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Unit\XdrModel\Operation;
+namespace Tests\Unit\XdrModel\Operation;
 
 
 use PHPUnit\Framework\TestCase;

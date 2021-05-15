@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Unit\Xdr;
+namespace Tests\Unit\Xdr;
 
 
 use phpseclib3\Math\BigInteger;

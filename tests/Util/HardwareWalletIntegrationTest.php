@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Util;
+namespace Tests\Util;
 
 
 use OneCoin\StellarSdk\Keypair;

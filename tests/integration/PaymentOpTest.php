@@ -1,13 +1,13 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Integration;
+namespace Tests\Integration;
 
 
 use phpseclib3\Math\BigInteger;
 use OneCoin\StellarSdk\Keypair;
 use OneCoin\StellarSdk\Model\StellarAmount;
-use OneCoin\StellarSdk\Test\Util\IntegrationTest;
+use Tests\Util\IntegrationTest;
 use OneCoin\StellarSdk\XdrModel\Asset;
 
 class PaymentOpTest extends IntegrationTest

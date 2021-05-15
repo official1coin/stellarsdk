@@ -1,7 +1,7 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Unit\Model;
+namespace Tests\Unit\Model;
 
 
 use phpseclib3\Math\BigInteger;

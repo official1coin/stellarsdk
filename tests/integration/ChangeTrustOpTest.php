@@ -1,10 +1,10 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Integration;
+namespace Tests\Integration;
 
 
-use OneCoin\StellarSdk\Test\Util\IntegrationTest;
+use Tests\Util\IntegrationTest;
 
 class ChangeTrustOpTest extends IntegrationTest
 {

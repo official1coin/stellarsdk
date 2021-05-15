@@ -1,12 +1,12 @@
 <?php
 
 
-namespace OneCoin\StellarSdk\Test\Integration;
+namespace Tests\Integration;
 
 
 use OneCoin\StellarSdk\Keypair;
 use OneCoin\StellarSdk\Server;
-use OneCoin\StellarSdk\Test\Util\IntegrationTest;
+use Tests\Util\IntegrationTest;
 
 
 class AccountTest extends IntegrationTest

@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCoin\StellarSdk\Test\Util;
+namespace Tests\Util;
 
 use PHPUnit\Framework\TestCase;
 use OneCoin\StellarSdk\Keypair;
